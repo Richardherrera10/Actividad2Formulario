@@ -30,7 +30,7 @@ ipcMain.on("registroValido", function(event, args){
     console.log(args)
     createWindow2()
     ventana2.webContents.on("did-finish-load", function(){
-        ventana2.webContents.send("inicioCorrecto", "Bienvenido")
+        ventana2.webContents.send("inicioCorrecto", "Bienvenido" + args[0])
     })
 })
 
